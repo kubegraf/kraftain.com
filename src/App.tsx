@@ -1,29 +1,25 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ProductStory from "./components/ProductStory";
-import Features from "./components/Features";
-import HowItWorks from "./components/HowItWorks";
-import SocialProof from "./components/SocialProof";
-import UseCases from "./components/UseCases";
+import StatusLine from "./components/StatusLine";
+import BootSequence from "./components/BootSequence";
+import TmuxPanes from "./components/TmuxPanes";
+import ManPage from "./components/ManPage";
+import LiveOps from "./components/LiveOps";
 import Pricing from "./components/Pricing";
-import FinalCTA from "./components/FinalCTA";
-import Footer from "./components/Footer";
+import Closing from "./components/Closing";
+import CrtOverlay from "./components/CrtOverlay";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-bg text-ink overflow-x-clip">
-      <Navbar />
-      <main>
-        <Hero />
-        <ProductStory />
-        <Features />
-        <HowItWorks />
-        <SocialProof />
-        <UseCases />
+    <div className="min-h-screen bg-bg text-ink">
+      <StatusLine />
+      <main className="relative">
+        <BootSequence />
+        <TmuxPanes />
+        <ManPage />
+        <LiveOps />
         <Pricing />
-        <FinalCTA />
+        <Closing />
       </main>
-      <Footer />
+      <CrtOverlay />
     </div>
   );
 }
